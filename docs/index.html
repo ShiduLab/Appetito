@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1e1711">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Appetito">
+  <meta name="description" content="Dimmi cosa hai in frigo e dispensa: Appetito propone ricette possibili e idee da fame creativa.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/appetito-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Appetito</title>
+</head>
+<body>
+<main class="app">
+  <header class="hero">
+    <img class="avatar" src="assets/appetito-avatar.png" alt="Cuoco di Appetito">
+    <div class="heroText">
+      <h1>Appetito</h1>
+      <p>Dimmi tutto, datemi datemi che vi dico vi dico…</p>
+    </div>
+    <button id="installBtn" class="ghost hidden">Installa</button>
+  </header>
+
+  <section class="card intro">
+    <strong>Hai fame e non sai che cucinare?</strong>
+    <span>Scrivi quello che vedi. Appetito prova a cavarne qualcosa.</span>
+  </section>
+
+  <section class="grid2">
+    <label class="field">
+      <span>Frigo</span>
+      <textarea id="fridge" placeholder="uova, mozzarella, pomodori, mezza cipolla…"></textarea>
+    </label>
+    <label class="field">
+      <span>Dispensa & spezie</span>
+      <textarea id="pantry" placeholder="pasta, ceci, pane, origano, paprika…"></textarea>
+    </label>
+  </section>
+
+  <section class="card">
+    <label class="field">
+      <span>Da consumare prima <small>(facoltativo)</small></span>
+      <input id="urgent" type="text" placeholder="es. zucchine, pane, yogurt">
+    </label>
+    <div class="row wrap basics">
+      <label><input id="basicWater" type="checkbox" checked> acqua</label>
+      <label><input id="basicSalt" type="checkbox" checked> sale</label>
+      <label><input id="basicOil" type="checkbox" checked> olio</label>
+      <span class="muted">Considerali già disponibili</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Che cucina hai?</h2>
+    <div class="tools">
+      <label><input type="checkbox" name="tool" value="fornello" checked> fornello</label>
+      <label><input type="checkbox" name="tool" value="padella" checked> padella</label>
+      <label><input type="checkbox" name="tool" value="pentola" checked> pentola</label>
+      <label><input type="checkbox" name="tool" value="forno"> forno</label>
+      <label><input type="checkbox" name="tool" value="microonde"> microonde</label>
+      <label><input type="checkbox" name="tool" value="tostapane"> tostapane</label>
+      <label><input type="checkbox" name="tool" value="frullatore"> frullatore</label>
+    </div>
+  </section>
+
+  <section class="modebar" aria-label="Modalità">
+    <button class="mode active" data-mode="ricette">Ricette</button>
+    <button class="mode" data-mode="ora">Ho fame ORA</button>
+    <button class="mode" data-mode="salva">Non buttare niente</button>
+    <button class="mode" data-mode="ingegno">Ingegno</button>
+  </section>
+
+  <div class="actions">
+    <button id="exampleBtn" class="ghost">Esempio</button>
+    <button id="clearBtn" class="ghost">Svuota</button>
+    <button id="cookBtn" class="primary">CHE MANGIO?</button>
+  </div>
+
+  <div id="chips" class="chips" aria-live="polite"></div>
+  <section id="results" class="results" aria-live="polite">
+    <div class="empty">Qui compariranno ricette possibili, quasi possibili e — se vuoi — esperimenti.</div>
+  </section>
+
+  <p class="safety">Appetito è un utensile domestico: controlla sempre stato degli alimenti, allergie e cottura sicura degli ingredienti crudi.</p>
+
+  <footer>
+    <a href="https://github.com/ShiduLab/Appetito" target="_blank" rel="noopener" title="ShiduLab">
+      <img src="assets/botolo.png" alt="Botolo"><span>ShiduLab</span>
+    </a>
+  </footer>
+</main>
+<script src="recipes.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
