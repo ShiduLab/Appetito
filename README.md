@@ -1,6 +1,7 @@
 # Appetito
 
 PWA mobile-first di ShiduLab.
+https://shidulab.github.io/Appetito/
 
 **Idea:** hai fame, non sai cucinare o hai poco in casa. Scrivi ciò che vedi nel frigo, nella dispensa e tra le spezie. Appetito prova a restituire:
 
